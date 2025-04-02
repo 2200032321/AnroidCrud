@@ -221,7 +221,10 @@ app.put('/users/:id', async (req, res) => {
       res.status(400).json({ error: error.message });
     }
   });
-    
+  app.get("/", (req, res) => {
+    res.send("🚀 Hello from Railway! Your API is working.");
+});
+
 
 // ✅ Start Server
 const PORT = process.env.PORT || 3000;
